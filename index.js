@@ -1,1 +1,3 @@
-console.log(process.argv);
+#!/usr/bin/env node
+
+console.log('hello world');
