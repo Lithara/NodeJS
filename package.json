@@ -12,5 +12,9 @@
   },
   "author": "",
   "license": "ISC",
-  "keywords": []
+  "keywords": [],
+  "dependencies": {
+    "exif-parser": "^0.1.12",
+    "yargs": "^17.7.2"
+  }
 }
