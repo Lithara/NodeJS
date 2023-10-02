@@ -1,8 +1,7 @@
 #!/usr/bin/env node
-import * as things from './utils'
-
 import fs from 'node:fs'
-import _ from 'lodash'
+
+import http from 'node:http'
 
 const note = process.argv[2];
 const newNote = {
