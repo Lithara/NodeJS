@@ -1,2 +1,2 @@
-import { other } from './other';
-import {count, somethingElse} from './utils'
+export { other } from './other';
+export {count, somethingElse} from './utils'
