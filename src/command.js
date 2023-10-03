@@ -1,4 +1,4 @@
-import yargs from 'yargs'
+import yargs, { option } from 'yargs'
 import { hideBin } from 'yargs/helpers'
 
 yargs(hideBin(process.argv))
@@ -9,6 +9,11 @@ yargs(hideBin(process.argv))
     })
   }, (argv) => {
     console.log(argv.note)
+  })
+  ,option('tags',{
+    alias: 't',
+    type: 'string',
+    description: 'Tags to add to the note',
   })
   .demandCommand(1)
   .parse()
