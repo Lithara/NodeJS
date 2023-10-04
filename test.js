@@ -1,10 +1,7 @@
-fs.readFile('file.txt').then(function (data) {
-    console.log(data);
-})
-.then(function (data) {
+const wait = (time, cb) => {
+    setTimeout(() => {
+        cb();
+    }, time);
+}
 
-})
-.then(function (data) {
-
-})
-  
+wait(3000, () => {console.log('3s')})
