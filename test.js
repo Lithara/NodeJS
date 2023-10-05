@@ -1,13 +1,15 @@
-const wait = new Promise((resolve, reject) => {
-    (time, cb) => {
-        setTimeout(() => {
-            cb();
-        }, time);
-    }
-})
+import {promisify} from 'util'
 
-wait(3000, () => {
-    wait(200, () => {
-        
+const wait = (time,cb) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve()
+        }, time)
     })
-})
+}
+
+const run = async () => {
+    await wait(3000)
+    wait(2000)
+    wait(1000)
+}
