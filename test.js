@@ -9,7 +9,7 @@ const wait = (time,cb) => {
 }
 
 const run = async () => {
-    await wait(3000)
+    await wait(await something())
     wait(2000)
     wait(1000)
 }
