@@ -1,15 +1,8 @@
-import {promisify} from 'util'
+import fs from 'node:fs/promises'
 
-const wait = (time,cb) => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve()
-        }, time)
-    })
+const readPjson = async () => {
+    const pjsonPath = new URL('./package.json', import.meta.url)
+    return JSON.parse(await fs.readFileSync(pjsonPath, 'utf-8'))
 }
 
-const run = async () => {
-    await wait(await something())
-    wait(2000)
-    wait(1000)
-}
+readPjson()
