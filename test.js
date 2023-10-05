@@ -2,7 +2,13 @@ import fs from 'node:fs/promises'
 
 const readPjson = async () => {
     const pjsonPath = new URL('./package.json', import.meta.url)
-    return JSON.parse(await fs.readFileSync(pjsonPath, 'utf-8'))
+    console.log(JSON.parse(await fs.readFileSync(pjsonPath, 'utf-8')))
 }
 
-readPjson()
+const writeFile = async () => {
+    const newFile = new URL('./demo.json', import.meta.url).pathname
+    await fs.writeFile(newFile, `console.log('yoooo!')`)
+}
+
+// readPjson()
+writeFile()
