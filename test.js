@@ -4,4 +4,10 @@ const wait = (time, cb) => {
     }, time);
 }
 
-wait(3000, () => {console.log('3s')})
+wait(3000, () => {
+    wait(200, () => {
+        wait(100, () => {
+            console.log('done');
+        })
+    })
+})
