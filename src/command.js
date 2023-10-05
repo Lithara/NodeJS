@@ -2,6 +2,10 @@ import yargs, { option } from 'yargs'
 import { hideBin } from 'yargs/helpers'
 import { newNote, getAllNotes } from './notes.js'
 
+const listNotes = nootes => {
+  notes.forEach(note =>)
+}
+
 yargs(hideBin(process.argv))
   .command('new <note>', 'Create a new note', yargs => {}, () => {
     return yargs.positional('note', {
@@ -18,7 +22,7 @@ yargs(hideBin(process.argv))
   })
   .command('all', 'get all notes', () => {}, async (argv) => {
     const notes = await getAllNotes()
-    
+
   })
   .command('find <filter>', 'get matching notes', yargs => {
     return yargs.positional('filter', {
