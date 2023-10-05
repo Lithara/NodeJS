@@ -2,8 +2,13 @@ import yargs, { option } from 'yargs'
 import { hideBin } from 'yargs/helpers'
 import { newNote, getAllNotes } from './notes.js'
 
-const listNotes = nootes => {
-  notes.forEach(note =>)
+const listNotes = notes => {
+  notes.forEach(({id, content, tags}) => {
+    console.log('id: ', id)
+    console.log('tags: ', tags)
+    console.log('content: ', content)
+    console.log('/n')
+  })
 }
 
 yargs(hideBin(process.argv))
