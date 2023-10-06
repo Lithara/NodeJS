@@ -15,6 +15,7 @@
   "keywords": [],
   "dependencies": {
     "exif-parser": "^0.1.12",
+    "open": "^9.1.0",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
